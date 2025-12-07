@@ -1,0 +1,58 @@
+---
+title: "TRABAJO_SEMANA_08"
+author: "FLORES TORRES ALICE GERMEN"
+format: html
+editor: visual
+---
+
+## **Como instalar paquete en Rstudio – Realiza tu grafico estadístico (HISTOGRAMA)**
+
+1.  Nos dirigimos a DOCUMENTOS DE GESTION \> GUIAS PRACTICAS \< y vamos al archivo Guía Práctica del curso
+2.  Nos ubicamos en la semana correspondiente a la práctica, nos dirigimos al Link del repositorio de Scripts
+3.  Una Vez que estemos en el enlace, descargaremos el Script 03
+4.  Una vez descargado, vamos a descargas y los abrimos en Rstudio
+5.  Descargamos el primer paquete:
+
+```{r}
+install.packages("readr")
+install.packages("fdth")
+library(readr)
+library(fdth)
+```
+
+6.   La carpeta será guardada en qmd
+
+7.   Luego de haber descargado los paquetes en Rstudio, descargamos el archivo CSV en repositorio, volvemos a abrir Rstudio e importamos el archivo y copiamos la data.
+
+8.  Luego copiamos y hacemos todos los scrip para realizar la gráfica o histograma y como resultado tendremos las siguientes graficas, dando ctrl+enter:
+
+    ### **Data**
+
+```{r}
+s04_diabetes <- read_csv("C:/Users/alice/Downloads/s04_diabetes.csv")
+View(s04_diabetes)
+
+data<- data.frame(s04_diabetes)
+data
+
+```
+
+### Apertura
+
+```{r}
+apertura<- data$Embarazos
+head(apertura)
+#head es para mostrar los primeros 6 primeros datos
+```
+
+### Vamos a realizar las graficas para ello instalaremos el paquete fdth
+
+```{r}
+tabla<-fdt(apertura)
+tabla
+```
+
+```{r}
+hist(apertura)
+hist(apertura, col = "red")
+```

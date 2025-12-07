@@ -1,0 +1,89 @@
+---
+title: "SEMANA_12"
+author: "FLORES TORRES ALICE GERMEN"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## **#Calcular las Medidas de dispersión (varianza, Desviacion estándar, rango, rango intercuartílico) y de Posicion (Cuartiles), script para visualizar las 6 primeras filas, y para poder visualizar un resumen de dichas medidas** 
+
+1.  Descargamos el archivo CSV que vamos a usar, abrimos e importamos el archivo en Rstudio
+2.  Luego de abrir el archivo nos saldrá una ventana donde veremos la tabla de los datos
+    del archivo, luego copiamos sus datos script
+3.  Pegamos los scripts que copiamos de la data y comenzamos hallando los datos de las 6
+    primeras filas, luego hacemos la estructura de la data y procedemos a calcular
+    las medidas de tendencia central.
+
+```{r}
+#IMPORTAMOS EL ARCHIVO CON EL QUE VAMOS A TRABAJAR
+data <- read_csv("C:/Users/alice/Downloads/s04_diabetes.csv")
+View(s04_diabetes)
+
+#ver las 6 primeras filas de la data
+head(data)
+```
+
+**#Estructura de la data**
+
+```{r}
+str(data)
+```
+
+**#MEDIDAS DE TENDENCIA CENTRAL**
+
+```{r}
+#medida aritmetica
+mean(data$Edad)
+```
+
+```{r}
+#mediana
+median(data$Edad)
+```
+
+```{r}
+#moda
+mode_Edad <-names(sort(table(data$Edad),decreasing = TRUE))
+```
+
+**#MEDIDAS DE DISPERSION**
+
+```{r}
+#Varianza
+var(data$Edad,na.rm = TRUE)
+```
+
+```{r}
+#Desviacion Estandar
+sd(data$Edad,na.rm = TRUE)
+```
+
+```{r}
+#Rango
+range(data$Edad,na.rm = TRUE)
+```
+
+```{r}
+#Rango intercuartilico
+IQR(data$Edad,na.rm = TRUE)
+```
+
+```{r}
+#Medida de Posicion 
+quantile(data$Edad,probs = c(0.25,0.50,0.75,0.90),na.rm = TRUE)
+```
+
+**#RESUMEN**
+
+```{r}
+summary(data$Edad)
+```
+
+```{r}
+#Resumen de todas las variables
+summary(data)
+```

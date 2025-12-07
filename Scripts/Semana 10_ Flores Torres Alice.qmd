@@ -1,0 +1,48 @@
+---
+title: "SEMANA_10"
+author: "FLORES TORRES ALICE GERMEN"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## **CALCULAR LAS MEDIDAS DE TENDENCIA CENTRAL (media aritmética, mediana y moda)**
+
+1.  Descargamos el archivo CSV que vamos a usar, abrimos e importamos el archivo en Rstudio
+2.  Luego de abrir el archivo nos saldrá una ventana donde veremos la tabla de los datos del archivo, luego copiamos sus datos script.
+3.  Pegamos los scrip que copiamos de la data y comenzamos hallando los datos de las 6 primeras filas, luego hacemos la estructura de la data y procedemos a calcular las medidas de tendencia central:
+
+```{r}
+#Importaremos el archivo con el que trabajaremos
+data<- read_csv("C:/Users/alice/Downloads/s04_diabetes.csv")
+View(s04_diabetes)
+
+#Ver las 6 primeras filas de la data
+head(data)
+```
+
+### **Estructura de la data**
+
+```{r}
+str(data)
+```
+
+**#MEDIDAS DE TENDENCIA CENTRAL**
+
+```{r}
+#Medida aritmetica
+mean(data$Edad)
+```
+
+```{r}
+#Mediana
+median(data$Edad)
+```
+
+```{r}
+#Moda
+mode_Edad <-names(sort(table(data$Edad),decreasing = TRUE))
+```
