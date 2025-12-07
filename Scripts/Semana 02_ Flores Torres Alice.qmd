@@ -1,0 +1,22 @@
+---
+title: "TRABAJO_SEMANA_02"
+author: "FLORES TORRES ALICE GERMEN"
+format: html
+editor: visual
+---
+
+# COMO CREAR UN PROYECTO EN RStudio
+
+1.  Ingresamos a RStudio
+
+<!-- -->
+
+2.  Vamos a la parte superior y seleccionamos la opcion File \< New project
+
+<!-- -->
+
+3.  Una vez estemos en New Project, nos saldran 3 opciones: New Directory, Existing Directory y Version Control
+4.  Nosotros seleccionaremos el tipo de proyecto, en este caso New Directory \< New Project para crear un proyecto vacio
+5.  Asignamos un nombre al proyecto, que tambien sera el nombre de la carpeta donde guardaremos los archivos. Ejem: "Flores_Torres_Alice_Sem_02"
+6.  Elegimos la ubicacion donde deseamos guardar la carpeta del proyecto usando el boton Browse
+7.  Finalmente, seleccionamos Create Project para crear la carpeta y abrir el proyecto en RStudio
