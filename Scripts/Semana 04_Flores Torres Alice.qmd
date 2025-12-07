@@ -1,0 +1,20 @@
+---
+title: "TRABAJO_SEMANA_04"
+author: "FLORES_TORRES_ALICE_GERMEN"
+format: html
+editor: visual
+---
+
+## Como descargar un archivo en formato CSV del repositorio GITHUB
+
+1.  Primero nos dirigimos a DOCUMENTOS DE GESTION \> GUIAS DE PRACTICAS \> Archivo Guía Práctica del curso
+
+2.  Nos ubicamos en la semana correspondiente a la práctica, luego iremos al LINK del repositorio
+
+3.  Luego de haber seleccionado el link, este nos enviara a la ventana del repositorio GitHub
+
+4.  Nos dirigiremos a la carpeta "data" del repositorio
+
+5.  Luego seleccionaremos y descargaremos un archivo CSV, en este caso **“S02_treat_artritis.csv”**
+
+6.  Luegi revisaremos en la parte de descargas en el navegador web y asi tendremos listo el archivo para trabajarlo en RStudio

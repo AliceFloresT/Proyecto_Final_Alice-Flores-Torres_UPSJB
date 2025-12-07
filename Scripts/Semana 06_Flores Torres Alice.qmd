@@ -1,0 +1,22 @@
+---
+title: "TRABAJO_SEMANA_06"
+author: "FLORES TORRES ALICE GERMEN"
+format: html
+editor: visual
+---
+
+## **Como limpiar una DATA para utilizar una columna especifica**
+
+1.  Nos dirigimos a la guía práctica de clase, seleccionamos el link del repositorio, nos dirigimos a la carpeta data y descargamos el documento CSV
+2.  Abrimos RStudio y nos dirigimos a import Dataset, seleccionaremos From text(readr)
+3.  Luego seleccionamos Browser y abrimos el archivo CSV
+4.  Luego de haber seleccionado el archivo, copiamos desde **“\<-read_csv”**, luego importamos el archivo
+5.  Luego de eso vemos y seleccionamos la columna que queremos limpiar "Insulina"
+6.  Procedemos a hacer la limpieza escribiendo lo siguiente:
+
+```{r}
+#CARGAR E IMPORTAR DATA
+data<-read_csv("C:/Users/alice/Downloads/s04_diabetes.csv")
+#LIMPIAR DATA DE LAS COLUMNAS QUE PRESENTEN NA
+data_limpiar<-data[!is.na(data$insulina),]
+```
